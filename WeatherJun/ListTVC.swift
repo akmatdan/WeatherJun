@@ -14,6 +14,9 @@ class ListTVC: UITableViewController {
 
     }
 
+    func fetchWeather() {
+        
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
