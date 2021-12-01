@@ -56,15 +56,39 @@
 		E3B995B02744E1C200494E7A /* WeatherJun */ = {
 			isa = PBXGroup;
 			children = (
-				E3B995B12744E1C200494E7A /* AppDelegate.swift */,
-				E3B995B32744E1C200494E7A /* SceneDelegate.swift */,
-				E3B995B72744E1C200494E7A /* Main.storyboard */,
-				E3B995BA2744E1C600494E7A /* Assets.xcassets */,
-				E3B995BC2744E1C600494E7A /* LaunchScreen.storyboard */,
-				E3B995BF2744E1C600494E7A /* Info.plist */,
-				E3B995C72744E31E00494E7A /* ListTVC.swift */,
+				E3E844BF27571AFA00FAD597 /* Model */,
+				E3E844C027571B0E00FAD597 /* View */,
+				E3E844C127571B2F00FAD597 /* Supporting files */,
 			);
 			path = WeatherJun;
+			sourceTree = "<group>";
+		};
+		E3E844BF27571AFA00FAD597 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3E844C027571B0E00FAD597 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3B995C72744E31E00494E7A /* ListTVC.swift */,
+				E3B995B72744E1C200494E7A /* Main.storyboard */,
+				E3B995BC2744E1C600494E7A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E3E844C127571B2F00FAD597 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				E3B995B12744E1C200494E7A /* AppDelegate.swift */,
+				E3B995B32744E1C200494E7A /* SceneDelegate.swift */,
+				E3B995BA2744E1C600494E7A /* Assets.xcassets */,
+				E3B995BF2744E1C600494E7A /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +312,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F898W4P72K;
-				INFOPLIST_FILE = WeatherJun/Info.plist;
+				INFOPLIST_FILE = "WeatherJun/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F898W4P72K;
-				INFOPLIST_FILE = WeatherJun/Info.plist;
+				INFOPLIST_FILE = "WeatherJun/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
