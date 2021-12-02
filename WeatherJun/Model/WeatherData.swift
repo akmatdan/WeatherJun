@@ -19,9 +19,35 @@ struct Info: Decodable {
 }
 
 struct Fact: Decodable {
-    let url: String
+    let temp: Int
+    let icon: String
+    let condition: String
+    let windSpeed: Int
+    let preassureMm: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case temp
+        case icon
+        case condition
+        case windSpeed = "wind_speed"
+        case preassureMm = "preassure_mm"
+    }
 }
 
 struct Forecast: Decodable {
+    let parts: Parts
+}
+
+struct Parts: Decodable {
+    let day: Day
+}
+
+struct Day: Decodable {
+    let tempMin: Int?
+    let tempMax: Int?
     
+    enum CodingKeys: String, CodingKey {
+        case tempMin = "tempMin"
+        case tempMax = "tempMax"
+    }
 }
