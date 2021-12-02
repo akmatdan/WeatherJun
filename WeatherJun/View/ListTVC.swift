@@ -14,7 +14,7 @@ class ListTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkWeatherManager.fetchWeather()
+        //networkWeatherManager.fetchWeather()
     }
     // MARK: - Table view data source
 
