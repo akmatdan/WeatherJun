@@ -6,16 +6,30 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ListTVC: UITableViewController {
+    
+    let nameCitiesArray = ["Москва", "Петербург", "Пенза"]
     
     let networkWeatherManager = NetworkWeatherManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //networkWeatherManager.fetchWeather()
+        networkWeatherManager.fetchWeather()
+        getCoordinateFrom(city: "Москва") { (coordinate, error) in
+            print(coordinate)
+        }
+        
     }
+    
+    func getCoordinateFrom(city: String, complition: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
+        CLGeocoder().geocodeAddressString(city) {(placemark, error) in
+            complition(placemark?.first?.location?.coordinate, error)
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
