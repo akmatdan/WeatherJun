@@ -9,8 +9,9 @@ import Foundation
 
 struct NetworkWeatherManager {
     
-    func fetchWeather(latitude: Double, longitude: Double, comlitionHendler: @escaping (Weather) -> Void) {
-        let urlString = "https://api.weather.yandex.ru/v2/forecast&lat=\(latitude)&lon=\(longitude)"
+    func fetchWeather(latitude: Double, longitude: Double, completionHendler: @escaping (Weather) -> Void) {
+        
+        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=\(latitude)&lon=\(longitude)"
         guard let url = URL(string: urlString) else { return }
         
         var request = URLRequest(url: url, timeoutInterval: Double.infinity)
@@ -24,8 +25,7 @@ struct NetworkWeatherManager {
             }
             // print(String(data: data, encoding: .utf8)!)
             if let weather = self.parseJSON(withData: data) {
-                print(weather)
-//                complitionHandler(weather)
+                completionHendler(weather)
             }
         }
         task.resume()

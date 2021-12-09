@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="al8-R4-R7T">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="al8-R4-R7T" customClass="ListCell" customModule="WeatherJun" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="al8-R4-R7T" id="dwZ-Ya-ouz">
@@ -66,6 +66,11 @@
                                         <constraint firstItem="bCB-0E-29Y" firstAttribute="centerY" secondItem="dwZ-Ya-ouz" secondAttribute="centerY" id="yLb-gB-fMU"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conditionCityLabel" destination="i7k-kg-rqQ" id="4uD-Iz-g2O"/>
+                                    <outlet property="nameCityLabel" destination="bCB-0E-29Y" id="665-IF-IHG"/>
+                                    <outlet property="tempCityLabel" destination="34y-Ee-vWo" id="yt4-ys-Q5w"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

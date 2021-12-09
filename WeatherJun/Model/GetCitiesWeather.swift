@@ -10,7 +10,7 @@ import CoreLocation
 
 let networkWeatherManager = NetworkWeatherManager()
 
-func getCityWeather(citiesArray: [String], complitionHandler: @escaping (Int, Weather) -> Void) {
+func getCityWeather(citiesArray: [String], completionHandler: @escaping (Int, Weather) -> Void) {
      
     for (index, item) in citiesArray.enumerated() {
         
@@ -18,14 +18,14 @@ func getCityWeather(citiesArray: [String], complitionHandler: @escaping (Int, We
             guard let coordinate = coordinate, error == nil else { return }
             
             networkWeatherManager.fetchWeather(latitude: coordinate.latitude, longitude: coordinate.longitude) { (weather) in
-                complitionHandler(index, weather)
+                completionHandler(index, weather)
             }
         }
     }
 }
 
-func getCoordinateFrom(city: String, complition: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
+func getCoordinateFrom(city: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
     CLGeocoder().geocodeAddressString(city) {(placemark, error) in
-        complition(placemark?.first?.location?.coordinate, error)
+        completion(placemark?.first?.location?.coordinate, error)
     }
 }
